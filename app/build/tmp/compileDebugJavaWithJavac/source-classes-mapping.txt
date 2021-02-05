@@ -1,0 +1,26 @@
+com/example/inventorymanager/LogoutFragment.java
+ com.example.inventorymanager.LogoutFragment
+com/example/inventorymanager/BuildConfig.java
+ com.example.inventorymanager.BuildConfig
+com/example/inventorymanager/HomeFragment.java
+ com.example.inventorymanager.HomeFragment
+com/example/inventorymanager/CustomerFragment.java
+ com.example.inventorymanager.CustomerFragment
+com/example/inventorymanager/MainActivity.java
+ com.example.inventorymanager.MainActivity
+ com.example.inventorymanager.MainActivity$1
+com/example/inventorymanager/ProfileFragment.java
+ com.example.inventorymanager.ProfileFragment
+com/example/inventorymanager/Login.java
+ com.example.inventorymanager.Login
+ com.example.inventorymanager.Login$1
+ com.example.inventorymanager.Login$2
+com/example/inventorymanager/PreLogin.java
+ com.example.inventorymanager.PreLogin
+ com.example.inventorymanager.PreLogin$1
+ com.example.inventorymanager.PreLogin$2
+com/example/inventorymanager/Register.java
+ com.example.inventorymanager.Register
+ com.example.inventorymanager.Register$1
+ com.example.inventorymanager.Register$2
+ com.example.inventorymanager.Register$3

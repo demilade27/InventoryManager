@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/drawable_ic_profile.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/font_poppins_semibold.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/font/poppins_semibold.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/drawable_ic_home.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/drawable/ic_home.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/drawable_ic_logout.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/drawable/ic_logout.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/layout_fragment_customer.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/layout/fragment_customer.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/layout_fragment_logout.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/layout/fragment_logout.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/layout_activity_register.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/layout/activity_register.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/font_poppins_light.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/font/poppins_light.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/menu_menu_scrolling.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/menu/menu_scrolling.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/layout_fragment_profile.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/menu_menu.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/menu/menu.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/drawable_ic_customer.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/drawable/ic_customer.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/layout_activity_pre_login.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/layout/activity_pre_login.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rivervalley/Documents/InventoryManager/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/rivervalley/Documents/InventoryManager/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    }
+]
