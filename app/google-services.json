@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "683949263370",
+    "project_id": "inventory-mangement-987a3",
+    "storage_bucket": "inventory-mangement-987a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683949263370:android:dfd35fdf030a3a1eb56df3",
+        "android_client_info": {
+          "package_name": "com.example.inventorymanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683949263370-46silotronfldb881s9m7rcp5ga7guhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcqq3E6M6sOLpWaJbYOYxDzhNDZZWPZiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683949263370-46silotronfldb881s9m7rcp5ga7guhb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

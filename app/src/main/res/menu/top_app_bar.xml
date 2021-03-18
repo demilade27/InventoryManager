@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/top_bar_account"
+        android:icon="@drawable/ic_account_circle_24"
+        android:title="@string/top_bar_account"
+        android:contentDescription="@string/content_description_account"
+        app:showAsAction="ifRoom" />
+
+
+
+    <item
+        android:id="@+id/top_bar_more"
+        android:title="@string/top_bar_more"
+        android:contentDescription="@string/content_description_more"
+        app:showAsAction="never" />
+
+
+</menu>
