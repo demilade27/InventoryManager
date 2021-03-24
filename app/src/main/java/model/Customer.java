@@ -7,6 +7,7 @@ public class Customer {
 
 
 
+
     public static final String CUSTOMER_TABLE = "customer";
     public static final String COL_CUSTOMER_ID = "customer_id";
     public static final String COL_FIRST_NAME = "first_name";
@@ -24,18 +25,16 @@ public class Customer {
     public static final String COL_DATE_CREATED = "date_created";
 
 
-    private String customerId;
-
-
-    private String firstName, lastName, companyName, mobileNumber,workNumber,
+    private int customerId,workNumber,mobileNumber;
+    private String firstName, lastName, companyName,
             email, postcode, line1, line2, city, state, country;
      Map<String, String> postData = new HashMap<String, String>();
 
 
 
     public Customer(String firstName, String lastName,
-                    String companyName, String mobileNumber,
-                    String workNumber, String email, String postcode,
+                    String companyName, int mobileNumber,
+                    int workNumber, String email, String postcode,
                     String line1, String line2, String city, String state,
                     String country) {
         this.firstName = firstName;
@@ -51,8 +50,12 @@ public class Customer {
         this.state = state;
         this.country = country;
     }
-
-
+    public Customer(int customerId, String firstName, int mobileNumber, String line1) {
+        this.customerId = customerId;
+        this.firstName = firstName;
+        this.mobileNumber = mobileNumber;
+        this.line1 = line1;
+    }
 
 
     @Override
@@ -71,6 +74,13 @@ public class Customer {
                 ", state='" + state + '\'' +
                 ", country='" + country + '\'' +
                 '}';
+    }
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getFirstName() {
@@ -97,19 +107,19 @@ public class Customer {
         this.companyName = companyName;
     }
 
-    public String getMobileNumber() {
+    public int getMobileNumber() {
         return mobileNumber;
     }
 
-    public void setMobileNumber(String mobileNumber) {
+    public void setMobileNumber(int mobileNumber) {
         this.mobileNumber = mobileNumber;
     }
 
-    public String getWorkNumber() {
+    public int getWorkNumber() {
         return workNumber;
     }
 
-    public void setWorkNumber(String workNumber) {
+    public void setWorkNumber(int workNumber) {
         this.workNumber = workNumber;
     }
 
@@ -174,8 +184,8 @@ public class Customer {
         postData.put(COL_FIRST_NAME, getFirstName());
         postData.put(COL_LAST_NAME, getLastName());
         postData.put(COL_COMPANY_NAME, getCompanyName());
-        postData.put(COL_MOBILE_NUMBER, getMobileNumber());
-        postData.put(COL_WORK_NUMBER,getWorkNumber());
+        postData.put(COL_MOBILE_NUMBER, String.valueOf(getMobileNumber()));
+        postData.put(COL_WORK_NUMBER,String.valueOf(getWorkNumber()));
         postData.put(COL_EMAIL, getEmail());
         postData.put(COL_POSTCODE, getPostcode());
         postData.put(COL_LINE_1, getLine1());
@@ -185,4 +195,5 @@ public class Customer {
         postData.put(COL_COUNTRY, getCountry());
         return this.postData;
     }
+
 }

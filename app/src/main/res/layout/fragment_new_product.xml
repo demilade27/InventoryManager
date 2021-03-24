@@ -28,17 +28,17 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="112dp"
                 android:ems="10"
-                android:hint="Product Name"
+                android:hint="@string/product_name_x"
                 android:inputType="text" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/product_unit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:ems="10"
-                android:hint="Unit"
-                android:inputType="number" />
+                android:hint="@string/unit_x"
+                android:inputType="textAutoComplete" />
 
             <EditText
                 android:id="@+id/product_sku"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:ems="10"
-                android:hint="SKU"
+                android:hint="@string/sku"
                 android:inputType="numberDecimal" />
             <!--TODO: center the text-->
 
@@ -57,8 +57,24 @@
                 android:layout_marginHorizontal="20dp"
                 android:ems="15"
                 android:gravity="start|top"
-                android:hint="Description"
+                android:hint="@string/description"
                 android:inputType="textMultiLine" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/additional_information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="76dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_basic_info_layout">
+
 
             <TextView
                 android:id="@+id/product_add_more"
@@ -66,9 +82,90 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
-                android:text="Add more Information"
+                android:gravity="center_horizontal"
+                android:text="@string/add_more_information"
                 android:textAlignment="center"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+
+                <TableRow android:layout_width="0dp">
+
+                    <EditText
+                        android:id="@+id/product_dimension"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/l_x_w_x_h"
+                        android:inputType="number" />
+
+
+                    <EditText
+                        android:id="@+id/product_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/weight_kg"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/product_upc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/upc"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/product_ean"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/ean"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/product_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/brand"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/product_manufacturer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/manufacturer"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/product_mpn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mpn"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/product_isbn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/isbn"
+                        android:inputType="number" />
+                </TableRow>
+                <TableRow/>
+            </TableLayout>
+
+
         </LinearLayout>
 
         <com.google.android.material.switchmaterial.SwitchMaterial
@@ -79,9 +176,9 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="32dp"
             android:checked="true"
-            android:text="Sales Information"
+            android:text="@string/sales_information"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_basic_info_layout" />
+            app:layout_constraintTop_toBottomOf="@+id/additional_information" />
 
         <LinearLayout android:id="@+id/product_sale_info_layout"
             android:layout_width="wrap_content"
@@ -92,14 +189,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_sales_info" >
 
-        <EditText
-            android:id="@+id/product_price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:ems="10"
-            android:hint="Price"
-            android:inputType="numberDecimal" />
+            <EditText
+                android:id="@+id/product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:ems="10"
+                android:hint="@string/selling_price"
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
         <com.google.android.material.switchmaterial.SwitchMaterial
@@ -108,7 +205,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:checked="true"
-            android:text="Purchase Information"
+            android:text="@string/purchase_information"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_sale_info_layout" />
 
@@ -128,7 +225,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:ems="10"
-                android:hint="Price"
+                android:hint="@string/cost_price"
                 android:inputType="numberDecimal" />
         </LinearLayout>
 
@@ -137,7 +234,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="88dp"
-            android:text="Cancel"
+            android:text="@string/cancel"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_purchase_info_layout" />
@@ -147,7 +244,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="92dp"
-            android:text="Submit"
+            android:text="@string/submit"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_purchase_info_layout" />

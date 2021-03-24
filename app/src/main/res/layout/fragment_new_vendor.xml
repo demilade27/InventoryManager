@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".NewVendor">
+<!--todo: add a way to add additional contacts-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/vendor_first_name"
+            app:layout_constraintHorizontal_bias="0.698"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/vendor_first_name" />
+
+        <EditText
+            android:id="@+id/vendor_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/ic_account_circle_24"
+            android:ems="10"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_last_name"
+            app:layout_constraintStart_toStartOf="@+id/vendor_last_name"
+            app:layout_constraintTop_toBottomOf="@+id/primary_contatct_text" />
+
+        <EditText
+            android:id="@+id/vendor_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_account_circle_24"
+            android:ems="10"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_email"
+            app:layout_constraintStart_toStartOf="@+id/vendor_email"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_first_name" />
+
+        <EditText
+            android:id="@+id/vendor_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_work_number"
+            app:layout_constraintStart_toStartOf="@+id/vendor_work_number"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_last_name" />
+
+        <EditText
+            android:id="@+id/vendor_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:drawableLeft="@drawable/company_logo"
+            android:ems="10"
+            android:hint="@string/company_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_company_detail_txt" />
+
+        <EditText
+            android:id="@+id/vendor_mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@android:drawable/ic_menu_call"
+            android:ems="10"
+            android:hint="@string/mobile_number"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_work_number" />
+
+        <EditText
+            android:id="@+id/vendor_work_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@android:drawable/ic_menu_call"
+            android:ems="10"
+            android:hint="@string/work_number"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_mobile_number"
+            app:layout_constraintStart_toStartOf="@+id/vendor_mobile_number"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_email" />
+
+        <TextView
+            android:id="@+id/primary_contatct_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Primary Contact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_country" />
+
+        <EditText
+            android:id="@+id/vendor_company_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:ems="10"
+            android:hint="Company Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_company_number"
+            app:layout_constraintStart_toStartOf="@+id/vendor_company_number"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_company_number" />
+
+        <EditText
+            android:id="@+id/vendor_company_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@android:drawable/ic_menu_call"
+            android:ems="10"
+            android:hint="Company Number"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_company_name"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/vendor_company_name"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_company_name" />
+
+        <EditText
+            android:id="@+id/vendor_company_postcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/company_logo"
+            android:ems="10"
+            android:hint="@string/post_code"
+            android:inputType="textPostalAddress"
+            app:layout_constraintBottom_toTopOf="@+id/vendor_line_1"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_company_email"
+            app:layout_constraintStart_toStartOf="@+id/vendor_company_email"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_company_email" />
+
+        <EditText
+            android:id="@+id/vendor_line_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/company_logo"
+            android:ems="10"
+            android:hint="@string/address_line_2"
+            android:inputType="textPostalAddress"
+            app:layout_constraintBottom_toTopOf="@+id/vendor_city"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_line_1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/vendor_line_1"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_line_1" />
+
+        <EditText
+            android:id="@+id/vendor_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/company_logo"
+            android:ems="10"
+            android:hint="@string/city"
+            android:inputType="textPostalAddress"
+            app:layout_constraintBottom_toTopOf="@+id/vendor_state"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_line_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/vendor_line_2"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_line_2" />
+
+        <EditText
+            android:id="@+id/vendor_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/company_logo"
+            android:ems="10"
+            android:hint="@string/country"
+            android:inputType="textPostalAddress"
+            app:layout_constraintBottom_toTopOf="@+id/primary_contatct_text"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_state"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/vendor_state" />
+
+        <EditText
+            android:id="@+id/vendor_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/company_logo"
+            android:ems="10"
+            android:hint="@string/state"
+            android:inputType="textPostalAddress"
+            app:layout_constraintBottom_toTopOf="@+id/vendor_country"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_city"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/vendor_city"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_city" />
+
+        <EditText
+            android:id="@+id/vendor_line_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/company_logo"
+            android:ems="10"
+            android:hint="@string/address_line_1"
+            android:inputType="textPostalAddress"
+            app:layout_constraintBottom_toTopOf="@+id/vendor_line_2"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_company_postcode"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/vendor_company_postcode"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_company_postcode" />
+
+        <TextView
+            android:id="@+id/vendor_company_detail_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Company Details"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_company_name"
+            app:layout_constraintStart_toStartOf="@+id/vendor_company_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/vendor_submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/vendor_mobile_number"
+            app:layout_constraintStart_toEndOf="@+id/vendor_cancel_btn"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_mobile_number"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/vendor_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/cancel"
+            app:layout_constraintStart_toStartOf="@+id/vendor_mobile_number"
+            app:layout_constraintTop_toBottomOf="@+id/vendor_mobile_number" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

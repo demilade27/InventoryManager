@@ -39,9 +39,9 @@ public class NewCustomer extends Fragment {
     private Button submitBtn, cancelBtn;
     private SwitchMaterial address_switch;
     private String firstName, lastName, companyName,
-            mobileNumber,workNumber,
             email, postcode, line1,
             line2, city, state, country;
+    private int  mobileNumber,workNumber;
 
     private DatabaseHelper dbh;
     private ProgressBar progressBar;
@@ -108,8 +108,8 @@ public class NewCustomer extends Fragment {
         firstName = getString(tilFirstName);
         lastName = getString(tilLastName);
         companyName = getString(tilCompanyName);
-        mobileNumber = getString(tilMobileNumber);
-        workNumber = getString(tilWorkNumber);
+        mobileNumber = Integer.parseInt(getString(tilMobileNumber));
+        workNumber = Integer.parseInt( getString(tilWorkNumber));
         email = getString(tilEmail);
         postcode = getString(tilPostcode);
         line1 = getString(tilLine1);

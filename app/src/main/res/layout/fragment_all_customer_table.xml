@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:name="com.example.inventorymanager.AllCustomers2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    app:layoutManager="LinearLayoutManager"
+    tools:context=".fragment.customerpages.AllCustomersTable"
+    tools:listitem="@layout/fragment_all_customer_table">
+    <!-- Table Heading -->
+    <TableRow
+        android:background="@color/primaryColor" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/col1"
+            android:padding="10dp"
+            android:layout_weight="4"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/col2"
+            android:padding="10dp"
+            android:layout_weight="4"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/col3"
+            android:padding="10dp"
+            android:layout_weight="4"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/col4"
+            android:padding="10dp"
+            android:layout_weight="4"
+            android:layout_gravity="center_horizontal"/>
+
+    </TableRow>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_customer_table_recycler"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+
+</TableLayout>

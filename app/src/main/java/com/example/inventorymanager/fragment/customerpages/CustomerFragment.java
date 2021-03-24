@@ -46,6 +46,7 @@ public class CustomerFragment extends Fragment {
         List<Fragment> customerPages = new ArrayList<>();
         customerPages.add(new CustomerDashboard());
         customerPages.add(new CustomerMenu());
+        customerPages.add(new AllCustomersTable());
         adapter = new CustomerSliderAdapter(this,customerPages);
         tabLayoutMediator = new TabLayoutMediator(tabLayout, pager, (tab, position) -> tab.setIcon(R.drawable.tab_indicator_default));
         fab.setOnClickListener(v ->{

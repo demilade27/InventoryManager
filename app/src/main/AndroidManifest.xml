@@ -11,7 +11,6 @@
         android:usesCleartextTraffic="true"
     android:theme="@style/Theme.InventoryManager">
         <activity android:name=".fragment.NewEmployee" />
-        <activity android:name=".fragment.inventorypages.NewSupplier" />
         <activity android:name=".activity.LocationSelection" />
         <activity android:name=".activity.Register" />
         <activity
