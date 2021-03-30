@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:id="@+id/product_variant_check_attribute_1"
 
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.inventorypages.NewProduct">
 
@@ -19,9 +19,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -33,25 +32,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/create_a_new_product_variant"
-                app:layout_constraintBottom_toTopOf="@+id/product_name"
+                app:layout_constraintBottom_toTopOf="@+id/product_variant_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/product_name"
+                android:id="@+id/product_variant_name"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="120dp"
-                android:hint="@string/product_name_x"
+                android:hint="Product Group Name*"
                 android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/product_variant_text" />
 
             <EditText
-                android:id="@+id/product_description"
+                android:id="@+id/product_variant_description"
                 android:layout_width="250dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="8dp"
@@ -60,10 +59,10 @@
                 android:inputType="textMultiLine"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_unit" />
+                app:layout_constraintTop_toBottomOf="@+id/product_variant_unit" />
 
             <AutoCompleteTextView
-                android:id="@+id/product_unit"
+                android:id="@+id/product_variant_unit"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -71,7 +70,7 @@
                 android:inputType="textAutoComplete"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_name" />
+                app:layout_constraintTop_toBottomOf="@+id/product_variant_name" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -97,29 +96,29 @@
                 android:text="@string/add_more_information"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/product_brand"
+                app:layout_constraintBottom_toTopOf="@+id/product_variant_brand"
                 app:layout_constraintStart_toStartOf="parent" />
 
 
             <EditText
-                android:id="@+id/product_brand"
+                android:id="@+id/product_variant_brand"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/brand"
                 android:inputType="text"
-                app:layout_constraintBaseline_toBaselineOf="@+id/product_manufacturer"
-                app:layout_constraintEnd_toStartOf="@+id/product_manufacturer"
+                app:layout_constraintBaseline_toBaselineOf="@+id/product_variant_manufacturer"
+                app:layout_constraintEnd_toStartOf="@+id/product_variant_manufacturer"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/product_manufacturer"
+                android:id="@+id/product_variant_manufacturer"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/manufacturer"
                 android:inputType="text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/product_brand" />
+                app:layout_constraintStart_toEndOf="@+id/product_variant_brand" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -130,11 +129,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
             android:orientation="vertical"
             android:paddingHorizontal="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/additional_information">
 
@@ -143,33 +143,104 @@
                 android:id="@+id/attribute_1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Attriute*"
+                android:hint="Attriute 1*"
                 app:layout_constraintEnd_toStartOf="@+id/product_variant_options_1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
             <EditText
                 android:id="@+id/product_variant_options_1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
                 android:hint="Options*"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/attribute_1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/product_add_attribute_1"
+                android:id="@+id/product_add_attribute_2"
                 android:layout_width="46dp"
                 android:layout_height="41dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_add_circle_outline_24"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/product_variant_options_1" />
+
+            <AutoCompleteTextView
+                android:id="@+id/attribute_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Attriute 2"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/product_variant_options_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_add_attribute_2" />
+
+            <EditText
+                android:id="@+id/product_variant_options_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Options"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/attribute_1"
+                app:layout_constraintTop_toBottomOf="@+id/product_add_attribute_2" />
+
+            <ImageButton
+                android:id="@+id/product_remove_attribute_2"
+                android:layout_width="46dp"
+                android:layout_height="41dp"
+                android:src="@drawable/ic_baseline_remove_circle"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_variant_options_2" />
+
+            <ImageButton
+                android:id="@+id/product_add_attribute_3"
+                android:layout_width="46dp"
+                android:layout_height="41dp"
+                android:src="@drawable/ic_add_circle_outline_24"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.839"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_variant_options_2" />
+
+            <AutoCompleteTextView
+                android:id="@+id/attribute_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Attriute 3"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/product_variant_options_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_remove_attribute_2" />
+
+            <EditText
+                android:id="@+id/product_variant_options_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Options"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/attribute_1"
+                app:layout_constraintTop_toBottomOf="@+id/product_remove_attribute_2" />
+
+            <ImageButton
+                android:id="@+id/product_remove_attribute_3"
+                android:layout_width="46dp"
+                android:layout_height="41dp"
+                android:src="@drawable/ic_baseline_remove_circle"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_variant_options_3" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -182,7 +253,7 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_variants_tag">
+            app:layout_constraintTop_toBottomOf="@+id/product_variant_generage_tags">
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -250,23 +321,21 @@
             android:id="@+id/product_submits_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:text="@string/submit"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/product_group"
-            app:layout_constraintTop_toBottomOf="@id/product_group"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@id/product_group" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/product_cancel_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_width="94dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="24dp"
             android:text="@string/cancel"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/product_group"
-            app:layout_constraintTop_toBottomOf="@id/product_group"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@id/product_group" />
 
         <TextView
             android:id="@+id/tag_text"
@@ -278,12 +347,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/attribute_layout" />
 
+        <Button
+            android:id="@+id/product_variant_generage_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Generate Tags"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_variants_tag" />
+
         <TextView
             android:id="@+id/product_variants_tag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="Attribute :Tags"
+            android:layout_marginStart="16dp"
+            android:text="Attribute 1 :Tags"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tag_text" />
 

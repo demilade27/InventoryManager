@@ -11,13 +11,13 @@ import androidx.annotation.Nullable;
 
 import com.example.inventorymanager.R;
 
-class NewVendor extends Fragment {
+class NewSupplier extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_new_vendor, container, false);
+        return inflater.inflate(R.layout.fragment_new_supplier, container, false);
     }
 }

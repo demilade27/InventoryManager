@@ -4,6 +4,7 @@ package com.example.inventorymanager.adapter.sale;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.inventorymanager.R;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.List;
 
@@ -49,12 +51,23 @@ public class TopProductsAdapter extends RecyclerView.Adapter<TopProductsAdapter.
         private ImageView image;
         private TextView name;
         private TextView description;
+        private MaterialButton addToCart;
+        private MaterialButton checkStock;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.top_product_image);
             name = itemView.findViewById(R.id.top_product_name);
             description = itemView.findViewById(R.id.top_product_desc);
+            addToCart = itemView.findViewById(R.id.top_product_add_to_cart);
+            addToCart.setOnClickListener(v -> {
+
+            });
+            checkStock = itemView.findViewById(R.id.top_product_check_stock);
+            checkStock.setOnClickListener(v -> {
+
+            });
 
         }
     }

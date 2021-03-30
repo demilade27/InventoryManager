@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".NewVendor">
+    tools:context=".fragment.inventorypages.NewSupplier">
 <!--todo: add a way to add additional contacts-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -43,12 +43,12 @@
             android:ems="10"
             android:hint="@string/last_name"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_email"
-            app:layout_constraintStart_toStartOf="@+id/vendor_email"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_email"
+            app:layout_constraintStart_toStartOf="@+id/supplier_email"
             app:layout_constraintTop_toBottomOf="@+id/vendor_first_name" />
 
         <EditText
-            android:id="@+id/vendor_email"
+            android:id="@+id/supplier_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -56,12 +56,12 @@
             android:ems="10"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_work_number"
-            app:layout_constraintStart_toStartOf="@+id/vendor_work_number"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_work_number"
+            app:layout_constraintStart_toStartOf="@+id/supplier_work_number"
             app:layout_constraintTop_toBottomOf="@+id/vendor_last_name" />
 
         <EditText
-            android:id="@+id/vendor_company_name"
+            android:id="@+id/supplier_company_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
@@ -72,10 +72,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_company_detail_txt" />
+            app:layout_constraintTop_toBottomOf="@+id/supplier_company_detail_txt" />
 
         <EditText
-            android:id="@+id/vendor_mobile_number"
+            android:id="@+id/supplier_mobile_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -86,10 +86,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_work_number" />
+            app:layout_constraintTop_toBottomOf="@+id/supplier_work_number" />
 
         <EditText
-            android:id="@+id/vendor_work_number"
+            android:id="@+id/supplier_work_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -97,9 +97,9 @@
             android:ems="10"
             android:hint="@string/work_number"
             android:inputType="phone"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_mobile_number"
-            app:layout_constraintStart_toStartOf="@+id/vendor_mobile_number"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_email" />
+            app:layout_constraintEnd_toEndOf="@+id/supplier_mobile_number"
+            app:layout_constraintStart_toStartOf="@+id/supplier_mobile_number"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_email" />
 
         <TextView
             android:id="@+id/primary_contatct_text"
@@ -109,10 +109,10 @@
             android:text="Primary Contact"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_country" />
+            app:layout_constraintTop_toBottomOf="@+id/supplier_country" />
 
         <EditText
-            android:id="@+id/vendor_company_email"
+            android:id="@+id/supplier_company_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -120,12 +120,12 @@
             android:ems="10"
             android:hint="Company Email"
             android:inputType="textEmailAddress"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_company_number"
-            app:layout_constraintStart_toStartOf="@+id/vendor_company_number"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_company_number" />
+            app:layout_constraintEnd_toEndOf="@+id/supplier_company_number"
+            app:layout_constraintStart_toStartOf="@+id/supplier_company_number"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_company_number" />
 
         <EditText
-            android:id="@+id/vendor_company_number"
+            android:id="@+id/supplier_company_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -133,54 +133,54 @@
             android:ems="10"
             android:hint="Company Number"
             android:inputType="phone"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_company_name"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_company_name"
             app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="@+id/vendor_company_name"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_company_name" />
+            app:layout_constraintStart_toStartOf="@+id/supplier_company_name"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_company_name" />
 
         <EditText
-            android:id="@+id/vendor_company_postcode"
+            android:id="@+id/supplier_company_postcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/company_logo"
             android:ems="10"
             android:hint="@string/post_code"
             android:inputType="textPostalAddress"
-            app:layout_constraintBottom_toTopOf="@+id/vendor_line_1"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_company_email"
-            app:layout_constraintStart_toStartOf="@+id/vendor_company_email"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_company_email" />
+            app:layout_constraintBottom_toTopOf="@+id/supplier_line_1"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_company_email"
+            app:layout_constraintStart_toStartOf="@+id/supplier_company_email"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_company_email" />
 
         <EditText
-            android:id="@+id/vendor_line_2"
+            android:id="@+id/supplier_line_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/company_logo"
             android:ems="10"
             android:hint="@string/address_line_2"
             android:inputType="textPostalAddress"
-            app:layout_constraintBottom_toTopOf="@+id/vendor_city"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_line_1"
+            app:layout_constraintBottom_toTopOf="@+id/supplier_city"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_line_1"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/vendor_line_1"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_line_1" />
+            app:layout_constraintStart_toStartOf="@+id/supplier_line_1"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_line_1" />
 
         <EditText
-            android:id="@+id/vendor_city"
+            android:id="@+id/supplier_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/company_logo"
             android:ems="10"
             android:hint="@string/city"
             android:inputType="textPostalAddress"
-            app:layout_constraintBottom_toTopOf="@+id/vendor_state"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_line_2"
+            app:layout_constraintBottom_toTopOf="@+id/supplier_state"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_line_2"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/vendor_line_2"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_line_2" />
+            app:layout_constraintStart_toStartOf="@+id/supplier_line_2"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_line_2" />
 
         <EditText
-            android:id="@+id/vendor_country"
+            android:id="@+id/supplier_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/company_logo"
@@ -188,69 +188,69 @@
             android:hint="@string/country"
             android:inputType="textPostalAddress"
             app:layout_constraintBottom_toTopOf="@+id/primary_contatct_text"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_state"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_state"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/vendor_state" />
+            app:layout_constraintStart_toStartOf="@+id/supplier_state" />
 
         <EditText
-            android:id="@+id/vendor_state"
+            android:id="@+id/supplier_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/company_logo"
             android:ems="10"
             android:hint="@string/state"
             android:inputType="textPostalAddress"
-            app:layout_constraintBottom_toTopOf="@+id/vendor_country"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_city"
+            app:layout_constraintBottom_toTopOf="@+id/supplier_country"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_city"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/vendor_city"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_city" />
+            app:layout_constraintStart_toStartOf="@+id/supplier_city"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_city" />
 
         <EditText
-            android:id="@+id/vendor_line_1"
+            android:id="@+id/supplier_line_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/company_logo"
             android:ems="10"
             android:hint="@string/address_line_1"
             android:inputType="textPostalAddress"
-            app:layout_constraintBottom_toTopOf="@+id/vendor_line_2"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_company_postcode"
+            app:layout_constraintBottom_toTopOf="@+id/supplier_line_2"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_company_postcode"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/vendor_company_postcode"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_company_postcode" />
+            app:layout_constraintStart_toStartOf="@+id/supplier_company_postcode"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_company_postcode" />
 
         <TextView
-            android:id="@+id/vendor_company_detail_txt"
+            android:id="@+id/supplier_company_detail_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Company Details"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_company_name"
-            app:layout_constraintStart_toStartOf="@+id/vendor_company_name"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_company_name"
+            app:layout_constraintStart_toStartOf="@+id/supplier_company_name"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/vendor_submit_btn"
+            android:id="@+id/supplier_submit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:text="@string/submit"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/vendor_mobile_number"
-            app:layout_constraintStart_toEndOf="@+id/vendor_cancel_btn"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_mobile_number"
+            app:layout_constraintEnd_toEndOf="@+id/supplier_mobile_number"
+            app:layout_constraintStart_toEndOf="@+id/supplier_cancel_btn"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_mobile_number"
             app:layout_constraintVertical_bias="1.0" />
 
         <Button
-            android:id="@+id/vendor_cancel_btn"
+            android:id="@+id/supplier_cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/cancel"
-            app:layout_constraintStart_toStartOf="@+id/vendor_mobile_number"
-            app:layout_constraintTop_toBottomOf="@+id/vendor_mobile_number" />
+            app:layout_constraintStart_toStartOf="@+id/supplier_mobile_number"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_mobile_number" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

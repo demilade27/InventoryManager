@@ -34,7 +34,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <androidx.fragment.app.FragmentContainerView
+    <FrameLayout
         android:id="@+id/fragment_container"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
@@ -42,9 +42,7 @@
         android:layout_gravity="start"
         android:layout_marginTop="?actionBarSize"
         android:layout_marginBottom="?actionBarSize"
-        app:defaultNavHost="true"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
-        app:navGraph="@navigation/nav_graph" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
 
 
 

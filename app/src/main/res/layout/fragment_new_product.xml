@@ -21,12 +21,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/create_a_new_product"
+                android:textSize="24sp" />
+
             <EditText
                 android:id="@+id/product_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="112dp"
+                android:layout_marginTop="30dp"
                 android:ems="10"
                 android:hint="@string/product_name_x"
                 android:inputType="text" />
@@ -190,7 +198,7 @@
             app:layout_constraintTop_toBottomOf="@+id/product_sales_info" >
 
             <EditText
-                android:id="@+id/product_price"
+                android:id="@+id/product_selling_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -220,7 +228,7 @@
             app:layout_constraintTop_toBottomOf="@+id/purchase_info">
 
             <EditText
-                android:id="@+id/supplier_price"
+                android:id="@+id/cost_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -233,9 +241,9 @@
             android:id="@+id/product_cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="88dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="32dp"
             android:text="@string/cancel"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_purchase_info_layout" />
 
@@ -243,9 +251,9 @@
             android:id="@+id/product_submits_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="92dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="96dp"
             android:text="@string/submit"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_purchase_info_layout" />
 

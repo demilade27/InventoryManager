@@ -68,7 +68,7 @@
                     android:text="add to cart" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/top_product_stock"
+                    android:id="@+id/top_product_check_stock"
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

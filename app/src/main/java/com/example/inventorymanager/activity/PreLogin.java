@@ -12,8 +12,6 @@ import com.example.inventorymanager.R;
 
 public class PreLogin extends AppCompatActivity {
 
-
-    //make reference to the buttons in the pre-login view
     Button loginButton;
     Button registerButton;
 
@@ -68,4 +66,5 @@ public class PreLogin extends AppCompatActivity {
 
 
     }
+
 }

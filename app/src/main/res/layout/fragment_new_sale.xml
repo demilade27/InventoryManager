@@ -74,7 +74,7 @@
             android:id="@+id/expected_shipment_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:text="Expected Shipment Date"
             app:layout_constraintEnd_toEndOf="@+id/order_number_text"
             app:layout_constraintHorizontal_bias="0.0"

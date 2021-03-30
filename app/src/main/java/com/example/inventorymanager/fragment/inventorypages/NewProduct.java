@@ -24,12 +24,13 @@ import java.util.Map;
 import model.Product;
 
 
+
 public class NewProduct extends Fragment {
     private static final String URL = "http://192.168.64.2/inventory_manager/product/create_product.php";
     private EditText tilProductName,tilProductUnit,tilProductSKU,
-            tilProductPrice,tilProductDescription;
+            tilProductSellingPrice,tilProductDescription;
     private MaterialButton cancelBtn,submitBtn;
-    private String productName, productSKU,productUnit, productPrice,productDescription;
+    private String productName, productSKU,productUnit, productSellingPrice,productDescription;
     private Product product;
 
 
@@ -48,7 +49,7 @@ public class NewProduct extends Fragment {
 
     private void submitOnclick(View view){
         setVariables();
-        this.product = new Product(productName,productSKU, productUnit, productPrice,productDescription);
+        this.product = new Product(productName,productSKU, productUnit, productSellingPrice,productDescription);
         CreateNewProduct(product);
 
     }
@@ -89,7 +90,7 @@ public class NewProduct extends Fragment {
         tilProductName = view.findViewById(R.id.product_name);
         tilProductUnit = view.findViewById(R.id.product_unit);
         tilProductSKU = view.findViewById(R.id.product_sku);
-        tilProductPrice = view.findViewById(R.id.product_price);
+        tilProductSellingPrice = view.findViewById(R.id.product_selling_price);
         tilProductDescription= view.findViewById(R.id.product_description);
     }
 
@@ -101,7 +102,7 @@ public class NewProduct extends Fragment {
         productName = getString(tilProductName);
         productUnit = getString(tilProductUnit);
         productSKU = getString(tilProductSKU);
-        productPrice = getString(tilProductPrice);
+        productSellingPrice = getString(tilProductSellingPrice);
         productDescription = getString(tilProductDescription);
     }
 

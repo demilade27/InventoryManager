@@ -14,7 +14,6 @@ import com.example.inventorymanager.R;
 
 public class Login extends AppCompatActivity {
 
-
     TextView registerRequest;
     EditText email, password;
     Button loginBtn;
@@ -70,6 +69,3 @@ public class Login extends AppCompatActivity {
         return false;
     }
 }
-
-
-

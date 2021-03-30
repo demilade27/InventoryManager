@@ -20,13 +20,11 @@ public class  MainActivity extends AppCompatActivity {
     MaterialToolbar topAppBar;
     BottomNavigationView bottomNavBar;
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.top_app_bar,menu);
         return true;
-
     }
 
     @Override
@@ -56,9 +54,7 @@ public class  MainActivity extends AppCompatActivity {
                     return false;
 
             }
-
         });
-
         topAppBar.setTitle("Home Page");
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
         bottomNavBar.setSelectedItemId(R.id.fragment_home);
@@ -96,4 +92,5 @@ public class  MainActivity extends AppCompatActivity {
             return true;
         });
     }
+
 }

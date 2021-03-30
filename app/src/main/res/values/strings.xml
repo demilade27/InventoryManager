@@ -167,6 +167,11 @@
     <string name="cost_price">Cost Price</string>
     <string name="selling_price">Selling price</string>
     <string name="create_a_new_product_variant">Create a New Product Variant</string>
+    <string-array name="inventory_basic_menu_list">
+        <item>All Products</item>
+        <item>Top Products</item>
+    </string-array>
+
     <string-array name="customer_basic_menu_list">
         <item>All Customers</item>
         <item>Top Customers</item>

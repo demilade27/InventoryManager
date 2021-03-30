@@ -3,61 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/preLogin">
+    <activity
+        android:id="@+id/preLogin"
+        android:name="com.example.inventorymanager.activity.PreLogin"
+        android:label="PreLogin" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.inventorymanager.activity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/login"
+        android:name="com.example.inventorymanager.activity.Login"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/register"
+        android:name="com.example.inventorymanager.activity.Register"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
     <fragment
-        android:id="@+id/customerFragment"
-        android:name="com.example.inventorymanager.fragment.customerpages.CustomerFragment"
-        android:label="CustomerFragment" >
-        <action
-            android:id="@+id/action_customerFragment_to_homeFragment2"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_customerFragment_to_inventoryFragment"
-            app:destination="@id/inventoryFragment" />
-        <action
-            android:id="@+id/action_customerFragment_to_saleFragment"
-            app:destination="@id/saleFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.inventorymanager.fragment.homepages.HomeFragment"
-        android:label="HomeFragment" >
-        <action
-            android:id="@+id/action_homeFragment_to_inventoryFragment"
-            app:destination="@id/inventoryFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_customerFragment"
-            app:destination="@id/customerFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_saleFragment"
-            app:destination="@id/saleFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/inventoryFragment"
-        android:name="com.example.inventorymanager.fragment.inventorypages.InventoryFragment"
-        android:label="InventoryFragment" >
-        <action
-            android:id="@+id/action_inventoryFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_inventoryFragment_to_customerFragment"
-            app:destination="@id/customerFragment" />
-        <action
-            android:id="@+id/action_inventoryFragment_to_saleFragment"
-            app:destination="@id/saleFragment" />
-    </fragment>
+        android:id="@+id/moreFragment"
+        android:name="com.example.inventorymanager.fragment.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
     <fragment
         android:id="@+id/saleFragment"
         android:name="com.example.inventorymanager.fragment.salepages.SaleFragment"
-        android:label="SaleFragment" >
-        <action
-            android:id="@+id/action_saleFragment_to_inventoryFragment"
-            app:destination="@id/inventoryFragment" />
-        <action
-            android:id="@+id/action_saleFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_saleFragment_to_customerFragment2"
-            app:destination="@id/customerFragment" />
-    </fragment>
+        android:label="SaleFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.inventorymanager.fragment.homepages.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="com.example.inventorymanager.fragment.inventorypages.InventoryFragment"
+        android:label="InventoryFragment" />
 </navigation>

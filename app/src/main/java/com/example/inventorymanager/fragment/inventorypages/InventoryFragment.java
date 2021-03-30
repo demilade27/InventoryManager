@@ -46,6 +46,14 @@ public class InventoryFragment extends Fragment {
         inventoryPages.add(new InventoryMenu());
         adapter = new InventorySliderAdapter(this,inventoryPages);
         tabLayoutMediator = new TabLayoutMediator(tabLayout, pager, (tab, position) -> tab.setIcon(R.drawable.tab_indicator_default));
+        fab.setOnLongClickListener(v -> {
+            Fragment fragment = new NewProductVariant();
+            FragmentManager fm = getParentFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(this.getId(), fragment);
+            transaction.commit();
+            return true;
+        });
         fab.setOnClickListener(v ->{
             Fragment fragment = new NewProduct();
             FragmentManager fm = getParentFragmentManager();
@@ -53,7 +61,6 @@ public class InventoryFragment extends Fragment {
             transaction.replace(this.getId(), fragment);
             transaction.commit();
         });
-
         pager.setAdapter(adapter);
         tabLayoutMediator.attach();
         return view;
