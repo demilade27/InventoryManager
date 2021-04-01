@@ -6,14 +6,14 @@ import java.util.Map;
 public class Product {
     public static final String COL_PRODUCT_ID = "product_id";
     public static final String COL_PRODUCT_NAME = "product_name";
-    public static final String COL_UNIT = "'unit'";
-    public static final String COL_SELLING_PRICE = "'selling_price'";
+    public static final String COL_UNIT = "unit";
+    public static final String COL_SELLING_PRICE = "selling_price";
     public static final String COL_DESCRIPTION = "description";
     public static final String COL_SKU = "sku";
 
     Map<String, String> postData = new HashMap<String, String>();
     private int productId;
-    private String sellingPrice;
+    private Double sellingPrice;
     private String name, unit, sku,description;
 
 
@@ -30,7 +30,7 @@ public class Product {
                 '}';
     }
 
-    public Product(String name, String sku, String unit, String sellingPrice, String description){
+    public Product(String name, String sku, String unit, Double sellingPrice, String description){
         this.name = name;
         this.description = description;
         this.sku = sku;
@@ -38,7 +38,7 @@ public class Product {
         this.sellingPrice = sellingPrice;
     }
 
-    public Product(String name, String sku, String sellingPrice, String description){
+    public Product(String name, String sku, Double sellingPrice, String description){
         this.name = name;
         this.description = description;
         this.sku = sku;
@@ -49,7 +49,7 @@ public class Product {
         this.description = description;
         this.sku = sku;
     }
-    public Product(int productId, String name, String sellingPrice){
+    public Product(int productId, String name, Double sellingPrice){
         this.productId= productId;
         this.name = name;
         this.sellingPrice = sellingPrice;
@@ -87,11 +87,11 @@ public class Product {
         this.unit = unit;
     }
 
-    public String getSellingPrice() {
+    public Double getSellingPrice() {
         return sellingPrice;
     }
 
-    public void setSellingPrice(String sellingPrice) {
+    public void setSellingPrice(Double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
 
@@ -99,7 +99,7 @@ public class Product {
         postData.put(COL_PRODUCT_NAME, getName());
         postData.put(COL_SKU,getSku());
         postData.put(COL_UNIT, getUnit());
-        postData.put(COL_SELLING_PRICE, getSellingPrice());
+        postData.put(COL_SELLING_PRICE, String.valueOf(getSellingPrice()));
         postData.put(COL_DESCRIPTION,getDescription());
         return this.postData;
     }

@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -30,8 +31,9 @@ public class NewProduct extends Fragment {
     private EditText tilProductName,tilProductUnit,tilProductSKU,
             tilProductSellingPrice,tilProductDescription;
     private MaterialButton cancelBtn,submitBtn;
-    private String productName, productSKU,productUnit, productSellingPrice,productDescription;
+    private String productName, productSKU,productUnit,productDescription;
     private Product product;
+    private double productSellingPrice;
 
 
     @Override
@@ -41,7 +43,12 @@ public class NewProduct extends Fragment {
 
         getAllEditText(view);
         cancelBtn = view.findViewById(R.id.product_cancel_btn);
-        submitBtn = view.findViewById(R.id.product_submits_btn);
+        cancelBtn.setOnClickListener(v -> {
+            Navigation.findNavController(getActivity(),R.id.fragment_container).navigate(R.id.action_newProduct_to_fragment_inventory);
+
+
+        });
+        submitBtn = view.findViewById(R.id.product_submit_btn);
         submitBtn.setOnClickListener(this::submitOnclick);
 
         return view;
@@ -51,6 +58,7 @@ public class NewProduct extends Fragment {
         setVariables();
         this.product = new Product(productName,productSKU, productUnit, productSellingPrice,productDescription);
         CreateNewProduct(product);
+
 
     }
 
@@ -102,7 +110,7 @@ public class NewProduct extends Fragment {
         productName = getString(tilProductName);
         productUnit = getString(tilProductUnit);
         productSKU = getString(tilProductSKU);
-        productSellingPrice = getString(tilProductSellingPrice);
+        productSellingPrice = Double.parseDouble(getString(tilProductSellingPrice));
         productDescription = getString(tilProductDescription);
     }
 

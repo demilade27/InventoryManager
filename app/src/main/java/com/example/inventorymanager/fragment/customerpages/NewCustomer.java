@@ -10,6 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -68,6 +69,8 @@ public class NewCustomer extends Fragment {
     }
 
     private void cancelOnClick(View view) {
+        Navigation.findNavController(getActivity(),R.id.fragment_container).navigate(R.id.action_newCustomer_to_fragment_customer);
+
     }
 
     private void findBtns(View view) {

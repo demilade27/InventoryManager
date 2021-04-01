@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.inventorymanager.R;
@@ -42,24 +43,18 @@ public class InventoryFragment extends Fragment {
 
         //initiate variables
         List<Fragment> inventoryPages = new ArrayList<>();
-        inventoryPages.add(new InventoryDashboard());
-        inventoryPages.add(new InventoryMenu());
+        inventoryPages.add(new InventoryDashboardNavHost());
+        inventoryPages.add(new InventoryMenuNavHost());
         adapter = new InventorySliderAdapter(this,inventoryPages);
         tabLayoutMediator = new TabLayoutMediator(tabLayout, pager, (tab, position) -> tab.setIcon(R.drawable.tab_indicator_default));
         fab.setOnLongClickListener(v -> {
-            Fragment fragment = new NewProductVariant();
-            FragmentManager fm = getParentFragmentManager();
-            FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(this.getId(), fragment);
-            transaction.commit();
+            Navigation.findNavController(getActivity(),R.id.fragment_container).
+                    navigate(R.id.action_fragment_inventory_to_newProductVariant);
             return true;
         });
         fab.setOnClickListener(v ->{
-            Fragment fragment = new NewProduct();
-            FragmentManager fm = getParentFragmentManager();
-            FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(this.getId(), fragment);
-            transaction.commit();
+            Navigation.findNavController(getActivity(),R.id.fragment_container).navigate(R.id.action_fragment_inventory_to_newProduct);
+
         });
         pager.setAdapter(adapter);
         tabLayoutMediator.attach();

@@ -5,7 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,40 +23,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerMenu extends Fragment {
+    private CardView allCustomerBtn;
+    private CardView topCustomerBtn;
 
-    private RecyclerView basicMenuRecycler;
-    private RecyclerView smartMenuRecycler;
 
-    private CustomerMenuListAdapter basicMenuAdapter;
-    private CustomerMenuListAdapter smartMenuAdapter ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup view = (ViewGroup) inflater
-                .inflate(R.layout.fragment_menu,
+                .inflate(R.layout.fragment_customer_menu,
                         container,
                         false);
-        String[] basic_menu;
-        String[] smart_menu;
+        allCustomerBtn = view.findViewById(R.id.all_customers_btn);
 
-        List<Fragment> feature_fragment= new ArrayList<>();
-        basic_menu= getResources().getStringArray(R.array.customer_basic_menu_list);
-        smart_menu= getResources().getStringArray(R.array.customer_menu_feature_list);
-
-
-        basicMenuAdapter = new CustomerMenuListAdapter(basic_menu,feature_fragment);
-        basicMenuRecycler = (RecyclerView) view.findViewById(R.id.basic_menu_recycler);
-        basicMenuRecycler.setHasFixedSize(true);
-        basicMenuRecycler.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        basicMenuRecycler.setAdapter(basicMenuAdapter);
-
-        smartMenuAdapter = new CustomerMenuListAdapter(smart_menu,feature_fragment);
-        smartMenuRecycler = (RecyclerView) view.findViewById(R.id.smart_menu_recycler);
-        smartMenuRecycler.setHasFixedSize(true);
-        smartMenuRecycler.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        smartMenuRecycler.setAdapter(smartMenuAdapter);
-
+        topCustomerBtn = view.findViewById(R.id.top_customers_btn);
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        NavController navController = Navigation.findNavController(getParentFragment().getView());
+
+        allCustomerBtn.setOnClickListener(v->{
+            navController.navigate(R.id.action_customerMenu_to_allCustomerPage);
+        });
+        topCustomerBtn.setOnClickListener(v -> {
+            Fragment fragment = new AllCustomerPage();
+            FragmentManager fm = getParentFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.setReorderingAllowed(true);
+            transaction.replace(this.getId(), fragment);
+            transaction.commit();
+
+        });
     }
 }

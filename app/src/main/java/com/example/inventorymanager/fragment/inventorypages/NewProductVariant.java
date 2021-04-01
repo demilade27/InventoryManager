@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +35,7 @@ public class NewProductVariant extends Fragment {
     private List<String>product_name,sku,cost_price,
             selling_price,upc,ean,isbn;
     private String allOptions;
-    private Button btngenrateTags;
+    private Button btngenrateTags,cancelBtn,submitBtn;
     private ImageButton addAttribute2,addAttribute3,removeAttribute2,removeAttribute3;
 
 
@@ -61,6 +62,10 @@ public class NewProductVariant extends Fragment {
         addAttribute3.setOnClickListener(this::addAttribute3);
         removeAttribute2.setOnClickListener(this::removeAttribute2);
         removeAttribute3.setOnClickListener(this::removeAttribute3);
+        cancelBtn.setOnClickListener(v -> {Navigation.findNavController(getActivity(),R.id.fragment_container).
+                navigate(R.id.action_newProductVariant_to_fragment_inventory);
+        });
+
         return view;
     }
 
@@ -78,7 +83,8 @@ public class NewProductVariant extends Fragment {
         addAttribute3= view.findViewById(R.id.product_add_attribute_3);
         removeAttribute2= view.findViewById(R.id.product_remove_attribute_2);
         removeAttribute3= view.findViewById(R.id.product_remove_attribute_3);
-
+        submitBtn = view.findViewById(R.id.product_submit_btn);
+        cancelBtn = view.findViewById(R.id.product_cancel_btn);
         etAttribute = new ArrayList<>();
         etOptions = new ArrayList<>();
         etAttribute.add(view.findViewById(R.id.attribute_1));

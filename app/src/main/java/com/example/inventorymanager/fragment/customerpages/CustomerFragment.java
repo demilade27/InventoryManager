@@ -10,10 +10,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.inventorymanager.R;
 import com.example.inventorymanager.adapter.customer.CustomerSliderAdapter;
+import com.example.inventorymanager.fragment.inventorypages.InventoryDashboardNavHost;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -44,17 +46,12 @@ public class CustomerFragment extends Fragment {
 
         //initiate variables
         List<Fragment> customerPages = new ArrayList<>();
-        customerPages.add(new CustomerDashboard());
-        customerPages.add(new CustomerMenu());
-        customerPages.add(new AllCustomersTable());
+        customerPages.add(new CustomerDashboardNavHost());
+        customerPages.add(new CustomerMenuNavHost());
         adapter = new CustomerSliderAdapter(this,customerPages);
         tabLayoutMediator = new TabLayoutMediator(tabLayout, pager, (tab, position) -> tab.setIcon(R.drawable.tab_indicator_default));
         fab.setOnClickListener(v ->{
-            Fragment fragment = new NewCustomer();
-            FragmentManager fm = getParentFragmentManager();
-            FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(this.getId(), fragment);
-            transaction.commit();
+            Navigation.findNavController(getActivity(),R.id.fragment_container).navigate(R.id.action_fragment_customer_to_newCustomer);
         });
 
         pager.setAdapter(adapter);

@@ -31,7 +31,6 @@ public class Customer {
      Map<String, String> postData = new HashMap<String, String>();
 
 
-
     public Customer(String firstName, String lastName,
                     String companyName, int mobileNumber,
                     int workNumber, String email, String postcode,
@@ -57,6 +56,15 @@ public class Customer {
         this.line1 = line1;
     }
 
+    public Customer(int customerId, String firstName, String lastName, String companyName, String email,int mobileNumber, int workNumber) {
+        this.customerId = customerId;
+        this.workNumber = workNumber;
+        this.mobileNumber = mobileNumber;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.companyName = companyName;
+        this.email = email;
+    }
 
     @Override
     public String toString() {

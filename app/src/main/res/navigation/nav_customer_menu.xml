@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_customer_menu"
+    app:startDestination="@id/customerMenu">
+    <fragment
+        android:id="@+id/customerMenu"
+        android:name="com.example.inventorymanager.fragment.customerpages.CustomerMenu"
+        android:label="fragment_customer_menu"
+        tools:layout="@layout/fragment_customer_menu" >
+        <action
+            android:id="@+id/action_customerMenu_to_allCustomerPage"
+            app:destination="@id/allCustomerPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/allCustomerPage"
+        android:name="com.example.inventorymanager.fragment.customerpages.AllCustomerPage"
+        android:label="AllCustomerPage" />
+</navigation>

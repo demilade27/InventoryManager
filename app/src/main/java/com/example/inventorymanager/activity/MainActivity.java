@@ -6,6 +6,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
 import com.example.inventorymanager.R;
 import com.example.inventorymanager.fragment.MoreFragment;
@@ -56,41 +59,10 @@ public class  MainActivity extends AppCompatActivity {
             }
         });
         topAppBar.setTitle("Home Page");
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
-        bottomNavBar.setSelectedItemId(R.id.fragment_home);
-        bottomNavBar.setOnNavigationItemSelectedListener(item -> {
-            Fragment fragment = null;
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+        NavController navController = navHostFragment.getNavController();
+        NavigationUI.setupWithNavController(bottomNavBar, navController);
 
-            switch (item.getItemId()) {
-                case R.id.fragment_home:
-                    topAppBar.setTitle("Home");
-                    fragment = new HomeFragment();
-                    break;
-                case R.id.fragment_inventory:
-                    topAppBar.setTitle("Inventory");
-                    fragment = new InventoryFragment();
-                    break;
-                case R.id.fragment_sale:
-                    topAppBar.setTitle("Sale");
-                    fragment = new SaleFragment();
-                    break;
-                case R.id.fragment_customer:
-                    topAppBar.setTitle("Customer");
-                    fragment = new CustomerFragment();
-                    break;
-                case R.id.fragment_more:
-                    topAppBar.setTitle("More");
-                    fragment = new MoreFragment();
-                    break;
-                default:
-                    fragment = new HomeFragment();
-                    break;
-            }
-
-            //set the new fragment of the view
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
-            return true;
-        });
     }
 
 }

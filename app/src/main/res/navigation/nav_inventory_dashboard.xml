@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_inventory_dashboard"
+    app:startDestination="@id/inventoryDashboard">
+
+    <fragment
+        android:id="@+id/inventoryDashboard"
+        android:name="com.example.inventorymanager.fragment.inventorypages.InventoryDashboard"
+        android:label="fragment_inventory_dashboard"
+        tools:layout="@layout/fragment_inventory_dashboard" />
+</navigation>

@@ -3,6 +3,8 @@ package com.example.inventorymanager.fragment.inventorypages;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -64,6 +66,12 @@ public class AllProducts extends Fragment {
         loadProducts();
         return view;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+    }
+
     private void loadProducts() {
 
         /*
@@ -89,7 +97,8 @@ public class AllProducts extends Fragment {
                                 //adding the product to product list
                                 productList.add(new Product(
                                         product.getInt(Product.COL_PRODUCT_ID),
-                                        product.getString(Product.COL_PRODUCT_NAME),null
+                                        product.getString(Product.COL_PRODUCT_NAME),
+                                        product.getDouble(Product.COL_SELLING_PRICE)
 
                                 ));
                             }

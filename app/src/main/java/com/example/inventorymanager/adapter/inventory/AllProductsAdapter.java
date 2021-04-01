@@ -35,7 +35,7 @@ public class AllProductsAdapter extends RecyclerView.Adapter<AllProductsAdapter.
         Product product=products.get(position);
         holder.id.setText(Integer.toString(product.getProductId()));
         holder.name.setText(product.getName());
-        holder.sellingPrice.setText(product.getSellingPrice());
+        holder.sellingPrice.setText(Double.toString(product.getSellingPrice()));
     }
 
     @Override

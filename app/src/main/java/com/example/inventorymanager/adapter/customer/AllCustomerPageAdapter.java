@@ -12,53 +12,55 @@ import com.example.inventorymanager.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem}.
- * TODO: Replace the implementation with code for your data type.
- */
+import model.Customer;
+
+
 public class AllCustomerPageAdapter extends RecyclerView.Adapter<AllCustomerPageAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private List<Customer> customerList;
 
-    public AllCustomerPageAdapter(List<DummyItem> items) {
-        mValues = items;
+    public AllCustomerPageAdapter( List<Customer> customerList) {
+        this.customerList= customerList;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_all_customer_page, parent, false);
+                .inflate(R.layout.customer_page_item, parent, false);
         return new ViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-//        holder.mItem = mValues.get(position);
-//        holder.mIdView.setText(mValues.get(position).id);
-//        holder.mContentView.setText(mValues.get(position).content);
+        Customer  customer = customerList.get(position);
+        holder.customerName.setText(customer.getFirstName()+" "+customer.getLastName());
+        holder.customerCompanyName.setText(customer.getCompanyName());
+        holder.email.setText(customer.getEmail());
+        holder.mobileNumber.setText(Integer.toString(customer.getMobileNumber()));
+
+
     }
 
     @Override
     public int getItemCount() {
-        return mValues.size();
+        return customerList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-//        public final View mView;
-//        public final TextView mIdView;
-//        public final TextView mContentView;
-//        public DummyItem mItem;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView customerName;
+        TextView customerCompanyName;
+        TextView email;
+        TextView mobileNumber;
 
         public ViewHolder(View view) {
             super(view);
-//            mView = view;
-//            mIdView = (TextView) view.findViewById("");
-//            mContentView = (TextView) view.findViewById(R.id.content);
+            customerName =  view.findViewById(R.id.customer_name_text);
+            customerCompanyName =view.findViewById(R.id.customer_company_name_text);
+            email = view.findViewById(R.id.customer_email_text);
+            mobileNumber =view.findViewById(R.id.customer_phone_number_text);
+
         }
 
-//        @Override
-//        public String toString() {
-//            return super.toString() + " '" + mContentView.getText() + "'";
-//        }
     }
 }

@@ -3,41 +3,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/preLogin">
-    <activity
-        android:id="@+id/preLogin"
-        android:name="com.example.inventorymanager.activity.PreLogin"
-        android:label="PreLogin" />
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.inventorymanager.activity.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
-    <activity
-        android:id="@+id/login"
-        android:name="com.example.inventorymanager.activity.Login"
-        android:label="activity_login"
-        tools:layout="@layout/activity_login" />
-    <activity
-        android:id="@+id/register"
-        android:name="com.example.inventorymanager.activity.Register"
-        android:label="activity_register"
-        tools:layout="@layout/activity_register" />
+    app:startDestination="@id/fragment_home">
     <fragment
-        android:id="@+id/moreFragment"
+        android:id="@+id/fragment_customer"
+        android:name="com.example.inventorymanager.fragment.customerpages.CustomerFragment"
+        android:label="CustomerFragment" >
+        <action
+            android:id="@+id/action_fragment_customer_to_newCustomer"
+            app:destination="@id/newCustomer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_sale"
+        android:name="com.example.inventorymanager.fragment.salepages.SaleFragment"
+        android:label="SaleFragment" />
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.example.inventorymanager.fragment.homepages.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/fragment_more"
         android:name="com.example.inventorymanager.fragment.MoreFragment"
         android:label="fragment_more"
         tools:layout="@layout/fragment_more" />
     <fragment
-        android:id="@+id/saleFragment"
-        android:name="com.example.inventorymanager.fragment.salepages.SaleFragment"
-        android:label="SaleFragment" />
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.inventorymanager.fragment.homepages.HomeFragment"
-        android:label="HomeFragment" />
-    <fragment
-        android:id="@+id/inventoryFragment"
+        android:id="@+id/fragment_inventory"
         android:name="com.example.inventorymanager.fragment.inventorypages.InventoryFragment"
-        android:label="InventoryFragment" />
+        android:label="InventoryFragment">
+        <action
+            android:id="@+id/action_fragment_inventory_self2"
+            app:destination="@id/fragment_inventory"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/fragment_inventory" />
+        <action
+            android:id="@+id/action_fragment_inventory_to_newProduct"
+            app:destination="@id/newProduct" />
+        <action
+            android:id="@+id/action_fragment_inventory_to_newProductVariant"
+            app:destination="@id/newProductVariant" />
+    </fragment>
+    <fragment
+        android:id="@+id/newCustomer"
+        android:name="com.example.inventorymanager.fragment.customerpages.NewCustomer"
+        android:label="fragment_new_customer"
+        tools:layout="@layout/fragment_new_customer" >
+        <action
+            android:id="@+id/action_newCustomer_to_fragment_customer"
+            app:destination="@id/fragment_customer" />
+    </fragment>
+    <fragment
+        android:id="@+id/newProduct"
+        android:name="com.example.inventorymanager.fragment.inventorypages.NewProduct"
+        android:label="fragment_new_product"
+        tools:layout="@layout/fragment_new_product" >
+        <action
+            android:id="@+id/action_newProduct_to_fragment_inventory"
+            app:destination="@id/fragment_inventory" />
+    </fragment>
+    <fragment
+        android:id="@+id/newProductVariant"
+        android:name="com.example.inventorymanager.fragment.inventorypages.NewProductVariant"
+        android:label="NewProductVariant" >
+        <action
+            android:id="@+id/action_newProductVariant_to_fragment_inventory"
+            app:destination="@id/fragment_inventory" />
+    </fragment>
 </navigation>
