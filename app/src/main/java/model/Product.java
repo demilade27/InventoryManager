@@ -15,7 +15,14 @@ public class Product {
     private int productId;
     private Double sellingPrice;
     private String name, unit, sku,description;
+    private int quantity;
 
+    public Product(int productId,String description, int quantity,Double sellingPrice) {
+        this.sellingPrice = sellingPrice;
+        this.productId = productId;
+        this.description = description;
+        this.quantity = quantity;
+    }
 
     @Override
     public String toString() {
@@ -83,7 +90,7 @@ public class Product {
         return unit;
     }
 
-    public void setUnit(String unit) {
+    public void setQuantity(String unit) {
         this.unit = unit;
     }
 
@@ -110,6 +117,14 @@ public class Product {
 
     public void setProductId(int productId) {
         this.productId = productId;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
 

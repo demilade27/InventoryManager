@@ -47,6 +47,7 @@ public class SaleFragment extends Fragment {
         salePages.add(new SaleShop());
         salePages.add(new SaleDashboard());
         salePages.add(new SaleMenu());
+        salePages.add(new NewSale());
 
         adapter = new SaleSliderAdapter(this,salePages);
         tabLayoutMediator = new TabLayoutMediator(tabLayout, pager, (tab, position) -> tab.setIcon(R.drawable.tab_indicator_default));
