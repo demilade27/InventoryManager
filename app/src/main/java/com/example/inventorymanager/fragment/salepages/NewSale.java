@@ -46,9 +46,9 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import model.Customer;
-import model.Employee;
-import model.Product;
+import com.example.inventorymanager.model.Customer;
+import com.example.inventorymanager.model.Employee;
+import com.example.inventorymanager.model.Product;
 
 import static com.android.volley.VolleyLog.wtf;
 
@@ -61,20 +61,20 @@ public class NewSale extends Fragment {
 
 
     //Invoice details
-    int customer_id;
-    int employee_id;
-    double grand_total;
-    String delivery_method;
-    String date_added;
-    String expected_ship_date;
+    private int customer_id;
+    private int employee_id;
+    private double grand_total;
+    private String delivery_method;
+    private String date_added;
+    private String expected_ship_date;
 
-    String dateString;
+    private String dateString;
 
     //For date
     private Calendar calendar;
     private int year, month, day;
 
-    Spinner customerSpinner, employeeSpinner, productSpinner, deliveryMethodsSpinner;
+    private Spinner customerSpinner, employeeSpinner, productSpinner, deliveryMethodsSpinner;
     private List<Customer> allCustomers = new ArrayList<>();
     private List<Product> allProducts = new ArrayList<>();
     private List<String> allCustomersNames = new ArrayList<>();
@@ -587,7 +587,7 @@ public class NewSale extends Fragment {
                                 System.out.println("Employee Data : " + employee.getString("first_name"));
 
                                 Employee nemployee = new Employee(employee.getInt("employee_id"), employee.getString("first_name"), employee.getString("last_name"));
-                                allEmployeesNames.add(nemployee.getFirst_name());
+                                allEmployeesNames.add(nemployee.getFirstName());
                                 allEmployees.add(nemployee);
 
                                 // Creating adapter for the customer spinner
@@ -633,7 +633,7 @@ public class NewSale extends Fragment {
     }
 
     private int getEmployeeIdFromPosition(ArrayList<Employee> allEmployees, int position) {
-        return allEmployees.get(position).getEmployee_id();
+        return allEmployees.get(position).getEmployeeId();
     }
 
     private int getProductIdFromPosition(ArrayList<Product> allProducts, int position) {
@@ -673,7 +673,6 @@ public class NewSale extends Fragment {
                 public void onResponse(String response) {
 
                     int order_id = 0;
-
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         //the response will return the order id
@@ -684,6 +683,7 @@ public class NewSale extends Fragment {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+
 
 
 

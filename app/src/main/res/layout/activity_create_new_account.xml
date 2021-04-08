@@ -1,44 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragment.NewEmployee">
-
+    android:layout_height="match_parent">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible">
+        android:padding="20dp"
+        tools:context=".activity.CreateNewAccount">
 
         <TextView
-            android:id="@+id/new_employee_text"
+            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Create a new employee"
+            android:layout_marginTop="64dp"
+            android:text="Create a new Branch "
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.408"
+            app:layout_constraintHorizontal_bias="0.462"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_first_name"
+            android:id="@+id/cna_company_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
 
-            android:hint="@string/first_name"
+            android:layout_marginTop="8dp"
+            android:hint="@string/company_name"
             app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.44"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/employee_role_group"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
             app:startIconDrawable="@drawable/ic_profile">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -49,16 +46,60 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_last_name"
+            android:id="@+id/cna_branch_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="297dp"
+            android:layout_height="58dp"
+
+            android:layout_marginTop="8dp"
+            android:hint="Branch name"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/cna_company_name"
+            app:layout_constraintStart_toStartOf="@+id/cna_company_name"
+            app:layout_constraintTop_toBottomOf="@+id/cna_company_name"
+            app:startIconDrawable="@drawable/ic_profile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cna_first_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+
+            android:layout_marginVertical="8dp"
+            android:hint="@string/first_name"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:startIconDrawable="@drawable/ic_profile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cna_last_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:layout_marginTop="8dp"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_first_name"
+            app:layout_constraintEnd_toEndOf="@+id/cna_first_name"
             app:layout_constraintHorizontal_bias="0.44"
-            app:layout_constraintStart_toStartOf="@+id/employee_first_name"
-            app:layout_constraintTop_toBottomOf="@+id/employee_first_name"
+            app:layout_constraintStart_toStartOf="@+id/cna_first_name"
+            app:layout_constraintTop_toBottomOf="@+id/cna_first_name"
             app:startIconDrawable="@drawable/ic_profile">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -69,18 +110,18 @@
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_user_name"
+            android:id="@+id/cna_user_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:layout_marginTop="8dp"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_last_name"
+            app:layout_constraintEnd_toEndOf="@+id/cna_last_name"
             app:layout_constraintHorizontal_bias="0.44"
-            app:layout_constraintStart_toStartOf="@+id/employee_last_name"
-            app:layout_constraintTop_toBottomOf="@+id/employee_last_name"
+            app:layout_constraintStart_toStartOf="@+id/cna_last_name"
+            app:layout_constraintTop_toBottomOf="@+id/cna_last_name"
             app:startIconDrawable="@drawable/ic_profile">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -91,64 +132,39 @@
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_dob"
+            android:id="@+id/cna_mobile_number"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginVertical="8dp"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_user_name"
-            app:layout_constraintHorizontal_bias="0.488"
-            app:layout_constraintStart_toStartOf="@+id/employee_user_name"
-            app:layout_constraintTop_toBottomOf="@+id/employee_user_name"
-            app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="Last name"
-                android:hint="Date of Birth"
-                android:inputType="date"
-                android:textAlignment="center" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_mobile_number"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_dob"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/employee_dob"
-            app:layout_constraintTop_toBottomOf="@+id/employee_dob"
+            app:layout_constraintEnd_toEndOf="@+id/cna_user_name"
+            app:layout_constraintStart_toStartOf="@+id/cna_user_name"
+            app:layout_constraintTop_toBottomOf="@+id/cna_user_name"
             app:startIconDrawable="@drawable/ic_local_phone_24">
 
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ems="10"
                 android:hint="@string/mobile_number"
                 android:inputType="number"
                 android:textAlignment="center" />
         </com.google.android.material.textfield.TextInputLayout>
 
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_work_number"
+            android:id="@+id/cna_work_number"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginVertical="8dp"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_mobile_number"
-            app:layout_constraintHorizontal_bias="0.44"
-            app:layout_constraintStart_toStartOf="@+id/employee_mobile_number"
-            app:layout_constraintTop_toBottomOf="@+id/employee_mobile_number"
+            app:layout_constraintEnd_toEndOf="@+id/cna_last_name"
+            app:layout_constraintStart_toStartOf="@+id/cna_mobile_number"
+            app:layout_constraintTop_toBottomOf="@+id/cna_mobile_number"
             app:startIconDrawable="@drawable/ic_local_phone_24">
 
 
@@ -162,16 +178,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_email"
+            android:id="@+id/cna_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:layout_marginTop="8dp"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_work_number"
+            app:layout_constraintEnd_toEndOf="@+id/cna_work_number"
             app:layout_constraintHorizontal_bias="0.44"
-            app:layout_constraintStart_toStartOf="@+id/employee_work_number"
-            app:layout_constraintTop_toBottomOf="@+id/employee_work_number"
+            app:layout_constraintStart_toStartOf="@+id/cna_work_number"
+            app:layout_constraintTop_toBottomOf="@+id/cna_work_number"
             app:startIconDrawable="@drawable/ic_baseline_email_24">
 
 
@@ -183,18 +200,42 @@
                 android:inputType="textEmailAddress"
                 android:textAlignment="center" />
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_password"
+            android:id="@+id/cna_confirm_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:layout_marginTop="8dp"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_email"
+            app:layout_constraintEnd_toEndOf="@+id/cna_work_number"
             app:layout_constraintHorizontal_bias="0.44"
-            app:layout_constraintStart_toStartOf="@+id/employee_email"
-            app:layout_constraintTop_toBottomOf="@+id/employee_email"
+            app:layout_constraintStart_toStartOf="@+id/cna_email"
+            app:layout_constraintTop_toBottomOf="@+id/cna_email"
+            app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Confirm Email"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cna_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_marginTop="8dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/cna_work_number"
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="@+id/cna_confirm_email"
+            app:layout_constraintTop_toBottomOf="@+id/cna_confirm_email"
             app:startIconDrawable="@drawable/ic_key_24">
 
 
@@ -202,34 +243,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Password"
-                android:inputType="textEmailAddress|textWebPassword"
+                android:hint="@string/password"
+                android:inputType="textEmailAddress"
                 android:textAlignment="center" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/employee_address_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:checked="true"
-            android:text="Don't Have An Address? "
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.718"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/employee_password" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_postcode"
+            android:id="@+id/cna_postcode"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:visibility="visible"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.44"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/employee_address_switch"
+            app:layout_constraintEnd_toEndOf="@+id/cna_email"
+            app:layout_constraintStart_toStartOf="@+id/cna_password"
+            app:layout_constraintTop_toBottomOf="@+id/cna_password"
             app:startIconDrawable="@drawable/ic_home">
 
 
@@ -244,17 +274,18 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_line1"
+            android:id="@+id/cna_line1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:layout_marginTop="8dp"
             android:visibility="visible"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_postcode"
+            app:layout_constraintEnd_toEndOf="@+id/cna_postcode"
             app:layout_constraintHorizontal_bias="0.441"
-            app:layout_constraintStart_toStartOf="@+id/employee_postcode"
-            app:layout_constraintTop_toBottomOf="@+id/employee_postcode"
+            app:layout_constraintStart_toStartOf="@+id/cna_postcode"
+            app:layout_constraintTop_toBottomOf="@+id/cna_postcode"
             app:startIconDrawable="@drawable/ic_home">
 
 
@@ -269,17 +300,18 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_line2"
+            android:id="@+id/cna_line2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:layout_marginTop="8dp"
             android:visibility="visible"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_line1"
+            app:layout_constraintEnd_toEndOf="@+id/cna_line1"
             app:layout_constraintHorizontal_bias="0.441"
-            app:layout_constraintStart_toStartOf="@+id/employee_line1"
-            app:layout_constraintTop_toBottomOf="@+id/employee_line1"
+            app:layout_constraintStart_toStartOf="@+id/cna_line1"
+            app:layout_constraintTop_toBottomOf="@+id/cna_line1"
             app:startIconDrawable="@drawable/ic_home">
 
 
@@ -295,17 +327,18 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_city"
+            android:id="@+id/cna_city"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:layout_marginTop="8dp"
             android:visibility="visible"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_line2"
+            app:layout_constraintEnd_toEndOf="@+id/cna_line2"
             app:layout_constraintHorizontal_bias="0.441"
-            app:layout_constraintStart_toStartOf="@+id/employee_line2"
-            app:layout_constraintTop_toBottomOf="@+id/employee_line2"
+            app:layout_constraintStart_toStartOf="@+id/cna_line2"
+            app:layout_constraintTop_toBottomOf="@+id/cna_line2"
             app:startIconDrawable="@drawable/ic_home">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -320,17 +353,18 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_state"
+            android:id="@+id/cna_state"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:layout_marginTop="8dp"
             android:visibility="visible"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_city"
+            app:layout_constraintEnd_toEndOf="@+id/cna_city"
             app:layout_constraintHorizontal_bias="0.441"
-            app:layout_constraintStart_toStartOf="@+id/employee_city"
-            app:layout_constraintTop_toBottomOf="@+id/employee_city"
+            app:layout_constraintStart_toStartOf="@+id/cna_city"
+            app:layout_constraintTop_toBottomOf="@+id/cna_city"
             app:startIconDrawable="@drawable/ic_home">
 
 
@@ -347,16 +381,17 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/employee_country"
+            android:id="@+id/cna_country"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
             android:layout_marginTop="8dp"
             app:endIconMode="clear_text"
-            app:layout_constraintEnd_toEndOf="@+id/employee_state"
+            app:layout_constraintEnd_toEndOf="@+id/cna_state"
             app:layout_constraintHorizontal_bias="0.44"
-            app:layout_constraintStart_toStartOf="@+id/employee_state"
-            app:layout_constraintTop_toBottomOf="@+id/employee_state"
+            app:layout_constraintStart_toStartOf="@+id/cna_state"
+            app:layout_constraintTop_toBottomOf="@+id/cna_state"
             app:startIconDrawable="@drawable/ic_home">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -372,7 +407,7 @@
 
 
         <Button
-            android:id="@+id/employee_cancel_btn"
+            android:id="@+id/cna_cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
@@ -381,11 +416,11 @@
             android:text="@string/cancel"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/employee_country"
+            app:layout_constraintTop_toBottomOf="@+id/cna_country"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/employee_submit_btn"
+            android:id="@+id/cna_submit_btn"
             android:layout_width="93dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
@@ -394,42 +429,20 @@
             android:text="@string/submit"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/employee_country"
+            app:layout_constraintTop_toBottomOf="@+id/cna_country"
             app:layout_constraintVertical_bias="0.0" />
 
-        <RadioGroup
-            android:id="@+id/employee_role_group"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="124dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/new_employee_text">
-
-            <RadioButton
-                android:id="@+id/admin_radio_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Admin" />
-
-            <RadioButton
-                android:id="@+id/cashier_radio_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cashier" />
-
-            <RadioButton
-                android:id="@+id/accountant_radio_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Accountant" />
-
-        </RadioGroup>
+            android:layout_marginTop="12dp"
+            android:text="Create an admin"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/cna_branch_name"
+            app:layout_constraintTop_toBottomOf="@+id/cna_branch_name" />
 
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

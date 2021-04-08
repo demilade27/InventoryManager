@@ -15,7 +15,7 @@ import com.example.inventorymanager.adapter.inventory.InventoryDashboardCardAdap
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Card;
+import com.example.inventorymanager.model.Card;
 
 public class InventoryDashboard extends Fragment {
     private RecyclerView cardListRecyclerView;

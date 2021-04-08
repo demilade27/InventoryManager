@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.example.inventorymanager.R;
 
 import java.util.List;
-import model.Customer;
+import com.example.inventorymanager.model.Customer;
 
 
 public class AllCustomerTableAdapter extends RecyclerView.Adapter<AllCustomerTableAdapter.ViewHolder> {

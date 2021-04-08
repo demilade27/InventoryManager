@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.android.tools.build</groupId>
-  <artifactId>builder-model</artifactId>
+  <artifactId>builder-com.example.inventorymanager.model</artifactId>
   <version>4.1.2</version>
   <name>Android Builder Model library</name>
   <description>Model for the Builder library.</description>

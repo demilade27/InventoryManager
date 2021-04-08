@@ -1,4 +1,4 @@
-package dao;
+package com.example.inventorymanager.helper;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import model.Customer;
+import com.example.inventorymanager.model.Customer;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String CUSTOMER_TABLE = "Customers";

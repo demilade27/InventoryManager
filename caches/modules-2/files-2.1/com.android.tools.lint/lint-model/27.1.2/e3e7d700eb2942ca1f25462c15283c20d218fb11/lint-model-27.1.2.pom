@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.android.tools.lint</groupId>
-  <artifactId>lint-model</artifactId>
+  <artifactId>lint-com.example.inventorymanager.model</artifactId>
   <version>27.1.2</version>
   <name>Android Tools Lint Build System Model</name>
-  <description>Lint build system model</description>
+  <description>Lint build system com.example.inventorymanager.model</description>
   <url>https://developer.android.com/studio</url>
   <inceptionYear>2007</inceptionYear>
   <licenses>
@@ -39,7 +39,7 @@
     </dependency>
     <dependency>
       <groupId>com.android.tools.build</groupId>
-      <artifactId>builder-model</artifactId>
+      <artifactId>builder-com.example.inventorymanager.model</artifactId>
       <version>4.1.2</version>
       <scope>compile</scope>
     </dependency>

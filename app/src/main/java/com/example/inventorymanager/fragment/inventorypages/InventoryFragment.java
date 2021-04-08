@@ -14,6 +14,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.inventorymanager.R;
 import com.example.inventorymanager.adapter.inventory.InventorySliderAdapter;
+import com.example.inventorymanager.fragment.NewEmployee;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -45,6 +46,7 @@ public class InventoryFragment extends Fragment {
         List<Fragment> inventoryPages = new ArrayList<>();
         inventoryPages.add(new InventoryDashboardNavHost());
         inventoryPages.add(new InventoryMenuNavHost());
+        inventoryPages.add(new NewEmployee());
         adapter = new InventorySliderAdapter(this,inventoryPages);
         tabLayoutMediator = new TabLayoutMediator(tabLayout, pager, (tab, position) -> tab.setIcon(R.drawable.tab_indicator_default));
         fab.setOnLongClickListener(v -> {

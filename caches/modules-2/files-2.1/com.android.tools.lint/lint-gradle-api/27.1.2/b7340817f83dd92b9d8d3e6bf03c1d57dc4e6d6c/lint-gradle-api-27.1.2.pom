@@ -33,7 +33,7 @@
     </dependency>
     <dependency>
       <groupId>com.android.tools.lint</groupId>
-      <artifactId>lint-model</artifactId>
+      <artifactId>lint-com.example.inventorymanager.model</artifactId>
       <version>27.1.2</version>
       <scope>compile</scope>
     </dependency>

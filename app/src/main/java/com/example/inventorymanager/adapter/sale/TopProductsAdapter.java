@@ -4,7 +4,6 @@ package com.example.inventorymanager.adapter.sale;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,7 +15,7 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.List;
 
-import model.TopProduct;
+import com.example.inventorymanager.model.TopProduct;
 
 public class TopProductsAdapter extends RecyclerView.Adapter<TopProductsAdapter.ViewHolder> {
     private List<TopProduct> topProducts;

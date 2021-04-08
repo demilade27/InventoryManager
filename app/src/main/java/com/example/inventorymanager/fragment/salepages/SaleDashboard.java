@@ -15,7 +15,7 @@ import com.example.inventorymanager.adapter.sale.SaleDashboardCardAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Card;
+import com.example.inventorymanager.model.Card;
 
 public class SaleDashboard extends Fragment {
 

@@ -1,4 +1,4 @@
-package model;
+package com.example.inventorymanager.model;
 
 public class TopProduct {
     private String description;

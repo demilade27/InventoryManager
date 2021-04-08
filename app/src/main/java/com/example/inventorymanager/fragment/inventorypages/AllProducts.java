@@ -1,12 +1,10 @@
 package com.example.inventorymanager.fragment.inventorypages;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,9 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.inventorymanager.R;
-import com.example.inventorymanager.adapter.customer.AllCustomerTableAdapter;
 import com.example.inventorymanager.adapter.inventory.AllProductsAdapter;
-import com.example.inventorymanager.dummy.DummyContent;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,8 +27,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Customer;
-import model.Product;
+import com.example.inventorymanager.model.Product;
 
 /**
  * A fragment representing a list of Items.

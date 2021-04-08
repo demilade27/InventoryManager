@@ -56,7 +56,7 @@ public class PreLogin extends AppCompatActivity {
 
                 //open the login activity
                 //1. Create a new intent
-                Intent intent = new Intent(getApplicationContext(), Register.class);
+                Intent intent = new Intent(getApplicationContext(), CreateNewAccount.class);
 
                 //Start the activity
                 startActivity(intent);

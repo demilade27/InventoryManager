@@ -1,4 +1,4 @@
-package model;
+package com.example.inventorymanager.model;
 
 public class Card {
     private  String title;

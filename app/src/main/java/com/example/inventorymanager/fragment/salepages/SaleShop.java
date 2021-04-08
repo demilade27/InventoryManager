@@ -16,7 +16,7 @@ import com.example.inventorymanager.adapter.sale.TopProductsAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.TopProduct;
+import com.example.inventorymanager.model.TopProduct;
 
 
 public class SaleShop extends Fragment {

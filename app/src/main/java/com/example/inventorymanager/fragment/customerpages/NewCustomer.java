@@ -22,14 +22,11 @@ import com.example.inventorymanager.R;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.textfield.TextInputLayout;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import dao.DatabaseHelper;
-import model.Customer;
+import com.example.inventorymanager.model.Customer;
 
 public class NewCustomer extends Fragment {
     private static final String URL = "http://192.168.64.2/inventory_manager/customer/create_customer.php";
@@ -44,7 +41,6 @@ public class NewCustomer extends Fragment {
             line2, city, state, country;
     private int  mobileNumber,workNumber;
 
-    private DatabaseHelper dbh;
     private ProgressBar progressBar;
     private Customer customer;
 
@@ -62,6 +58,50 @@ public class NewCustomer extends Fragment {
         address_switch.setOnClickListener(this::addressSwitchOnClick);
 
         return view;
+    }
+
+    private void submitOnClick(View v) {
+
+
+
+        setVariables();
+        customer = new Customer(
+                firstName, lastName, companyName,
+                mobileNumber, workNumber,
+                email,postcode, line1, line2, city,
+                state, country);
+        CreateNewCustomer();
+
+    }
+
+    private boolean CreateNewCustomer(){
+        Map<String, String> params = this.customer.getMap();
+        RequestQueue queue;
+        queue = Volley.newRequestQueue(getContext());
+
+
+        StringRequest jsonObjectRequest= new StringRequest(Request.Method.POST,URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Toast.makeText(getContext(), "response from server: " + response, Toast.LENGTH_LONG).show();
+                Log.i("Info", "response " + response);
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getContext(), "response from server: " + error.getMessage(), Toast.LENGTH_LONG).show();
+                Log.i("Error", "Error " + error.getMessage());
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() {
+                return params;
+            }};
+        queue.add(jsonObjectRequest);
+
+        return false;
     }
 
     private void findSwitchs(View view) {
@@ -93,20 +133,6 @@ public class NewCustomer extends Fragment {
         tilCountry = (TextInputLayout)  view. findViewById(R.id.customer_country);
     }
 
-    private void submitOnClick(View v) {
-
-
-
-        setVariables();
-        customer = new Customer(
-                firstName, lastName, companyName,
-                mobileNumber, workNumber,
-                email,postcode, line1, line2, city,
-                state, country);
-        CreateNewCustomer(customer);
-
-    }
-
     private void setVariables() {
         firstName = getString(tilFirstName);
         lastName = getString(tilLastName);
@@ -121,39 +147,9 @@ public class NewCustomer extends Fragment {
         state = getString(tilState);
         country = getString(tilCountry);
     }
-    @NotNull
+
     private String getString(TextInputLayout TIL) {
         return TIL.getEditText().getText().toString();
-    }
-
-    private boolean CreateNewCustomer(Customer customer){
-        Map<String, String> params = customer.getMap();
-        RequestQueue queue;
-        queue = Volley.newRequestQueue(getContext());
-
-
-        StringRequest jsonObjectRequest= new StringRequest(Request.Method.POST,URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Toast.makeText(getContext(), "response from server: " + response, Toast.LENGTH_LONG).show();
-                Log.i("Info", "response " + response);
-
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getContext(), "response from server: " + error.getMessage(), Toast.LENGTH_LONG).show();
-                Log.i("Error", "Error " + error.getMessage());
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() {
-                return params;
-            }};
-        queue.add(jsonObjectRequest);
-
-       return false;
     }
 
     private void clearTextViews(){

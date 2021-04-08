@@ -8,11 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.inventorymanager.R;
-import com.example.inventorymanager.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
-import model.Customer;
+import com.example.inventorymanager.model.Customer;
 
 
 public class AllCustomerPageAdapter extends RecyclerView.Adapter<AllCustomerPageAdapter.ViewHolder> {

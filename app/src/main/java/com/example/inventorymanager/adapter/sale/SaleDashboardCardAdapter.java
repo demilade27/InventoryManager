@@ -16,8 +16,8 @@ import com.example.inventorymanager.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Card;
-import model.CardList;
+import com.example.inventorymanager.model.Card;
+import com.example.inventorymanager.model.CardList;
 
 public class SaleDashboardCardAdapter extends RecyclerView.Adapter<SaleDashboardCardAdapter.ViewHolder>{
     private Context activity;

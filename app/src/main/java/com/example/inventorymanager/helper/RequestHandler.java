@@ -1,4 +1,4 @@
-package com.example.inventorymanager;
+package com.example.inventorymanager.helper;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

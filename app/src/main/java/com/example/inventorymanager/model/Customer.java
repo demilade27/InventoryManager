@@ -1,4 +1,4 @@
-package model;
+package com.example.inventorymanager.model;
 
 import java.util.HashMap;
 import java.util.Map;

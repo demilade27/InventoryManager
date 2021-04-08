@@ -25,7 +25,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Customer;
+import com.example.inventorymanager.model.Customer;
 
 /**
  * A fragment representing a list of Items.

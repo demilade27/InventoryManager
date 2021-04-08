@@ -22,7 +22,7 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.Map;
 
-import model.Product;
+import com.example.inventorymanager.model.Product;
 
 
 

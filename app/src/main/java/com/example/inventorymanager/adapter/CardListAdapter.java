@@ -12,7 +12,7 @@ import com.example.inventorymanager.R;
 
 import java.util.List;
 
-import model.CardList;
+import com.example.inventorymanager.model.CardList;
 
 public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.ViewHolder> {
     private List<CardList> cardList;
